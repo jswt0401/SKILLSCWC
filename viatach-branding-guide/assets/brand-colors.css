@@ -1,0 +1,207 @@
+/**
+ * Viatach A/S - Brand Colors CSS
+ *
+ * This stylesheet contains all official Viatach brand colors as CSS variables.
+ * Import this file in your project to ensure consistent brand colors.
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="brand-colors.css">
+ *
+ * Or in your CSS:
+ *   @import url('brand-colors.css');
+ */
+
+:root {
+  /* Primary Colors */
+  --viatach-bg-black: #000000;
+  --viatach-blue: #70BBFF;
+  --viatach-green: #9AD038;
+
+  /* Text Colors */
+  --viatach-text-white: #FFFFFF;
+  --viatach-text-light: #F0F0F0;
+  --viatach-gray: #555555;
+
+  /* UI Colors */
+  --viatach-bg-card: #0A0A0A;
+  --viatach-bg-hover: #1A1A1A;
+  --viatach-border: #1A1A1A;
+
+  /* Interactive States */
+  --viatach-blue-hover: #5AA8E6;
+  --viatach-blue-active: #4A98D6;
+  --viatach-green-hover: #88BD30;
+
+  /* Semantic Colors */
+  --viatach-success: #9AD038;
+  --viatach-error: #FF4444;
+  --viatach-warning: #FFB020;
+  --viatach-info: #70BBFF;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.2);
+  --shadow-blue: 0 8px 16px rgba(112, 187, 255, 0.3);
+  --shadow-green: 0 8px 16px rgba(154, 208, 56, 0.3);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Typography */
+  --font-family-heading: 'Montserrat', 'Poppins', 'Inter', sans-serif;
+  --font-family-body: 'Roboto', 'Lato', 'Open Sans', sans-serif;
+
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-tiny: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--viatach-bg-black);
+  color: var(--viatach-text-light);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Utility Classes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  color: var(--viatach-blue);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  color: var(--viatach-text-white);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  color: var(--viatach-text-white);
+}
+
+/* Button Styles */
+.btn {
+  font-family: var(--font-family-body);
+  font-weight: 700;
+  font-size: var(--font-size-body);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--viatach-blue);
+  color: var(--viatach-bg-black);
+}
+
+.btn-primary:hover {
+  background-color: var(--viatach-blue-hover);
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  background-color: var(--viatach-blue-active);
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--viatach-green);
+  border: 1px solid var(--viatach-green);
+}
+
+.btn-secondary:hover {
+  background-color: var(--viatach-green);
+  color: var(--viatach-bg-black);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--viatach-bg-card);
+  border: 1px solid var(--viatach-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  border-color: var(--viatach-blue);
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+
+/* Input Styles */
+.input {
+  background-color: var(--viatach-bg-black);
+  color: var(--viatach-text-white);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  border: 1px solid var(--viatach-gray);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  width: 100%;
+  transition: all var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid var(--viatach-blue);
+  box-shadow: 0 0 0 3px rgba(112, 187, 255, 0.1);
+}
+
+.input::placeholder {
+  color: var(--viatach-gray);
+}
+
+/* Utility Classes */
+.text-blue { color: var(--viatach-blue); }
+.text-green { color: var(--viatach-green); }
+.text-white { color: var(--viatach-text-white); }
+.text-gray { color: var(--viatach-gray); }
+
+.bg-black { background-color: var(--viatach-bg-black); }
+.bg-card { background-color: var(--viatach-bg-card); }
+.bg-blue { background-color: var(--viatach-blue); }
+.bg-green { background-color: var(--viatach-green); }
